@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application   
+//All packages needed for the app to run  
 const fs = require ("fs");
 const inquirer = require("inquirer");
 const { error } = require("console");
@@ -13,13 +13,13 @@ function validateInput(value){
     };
 }
 
-// TODO: Create an array of questions for user input
+//Array of Questions for user Input
 const questions = [
     //For user to enter their title.
     {
         type:"input",
         name:"pageTitle",
-        message:"What's the title of your Repo/Prject?",
+        message:"What's the title of your Repo/Project?",
         validate: validateInput,
     },
     //For user to enter their Description
@@ -93,7 +93,7 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file
+//Writes the given info to generateMarkdown, which then creates the ReadME
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err) {
         if (err) throw (err);
@@ -103,7 +103,7 @@ function writeToFile(fileName, data) {
 }
 
 
-// TODO: Create a function to initialize app
+//initializes the app
 function init() {
     inquirer.prompt(questions).then((answers) => {
         const markdownContent = generateMarkdown(answers);
