@@ -17,7 +17,7 @@ In this Project, I built a "README generator" with custom inputs for a user to f
 ## Features
 - Create Several Different Types of SVG's
 
-- 
+  
 # Video
 https://youtu.be/H2tZbBK9-zI
 
